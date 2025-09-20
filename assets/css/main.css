@@ -3580,6 +3580,10 @@ html, body, .page, .main, .hero, .header, .footer {
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
+.portfolio {
+  padding-top: 100px !important;
+}
+
 .portfolio .portfolio-filters {
   display: flex;
   justify-content: center;
@@ -3591,6 +3595,10 @@ html, body, .page, .main, .hero, .header, .footer {
 }
 
 @media (max-width: 768px) {
+  .portfolio {
+    padding-top: 80px !important;
+  }
+  
   .portfolio .portfolio-filters {
     justify-content: flex-start;
     flex-wrap: nowrap;
