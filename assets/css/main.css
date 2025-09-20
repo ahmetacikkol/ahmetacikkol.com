@@ -1202,31 +1202,32 @@ h6 {
   }
 }
 
-/* Small phones */
-@media screen and (max-width: 480px) {
+/* Small phones (but bigger than iPhone 12/13/14) */
+@media screen and (min-width: 391px) and (max-width: 480px) {
   .hero .hero-content h1 {
     font-size: 1.8rem !important;
-    margin-top: -60px !important;
-    margin-bottom: 15px !important; /* H1 ile H2 arasına boşluk */
+    margin-top: 50px !important;
+    margin-bottom: 15px !important;
   }
   
   .hero .hero-content h2 {
-    font-size: 0.75rem !important; /* Font biraz büyüt */
-    max-height: 160px !important; /* DAHA BÜYÜK yükseklik */
-    overflow: visible !important; /* Taşan yazıları göster */
+    font-size: 0.75rem !important;
+    max-height: 160px !important;
+    overflow: visible !important;
     display: block !important;
-    line-height: 1.1 !important; /* Satır aralığı */
-    padding: 0 !important; /* Padding kaldır */
+    line-height: 1.1 !important;
+    padding: 0 !important;
     margin-bottom: 15px !important;
+    margin-top: 30px !important;
     text-align: center !important;
-    border: none !important; /* Border kaldır */
-    background: none !important; /* Arka plan kaldır */
+    border: none !important;
+    background: none !important;
     position: relative !important;
-    z-index: 10002 !important; /* Mask'ın üstünde olsun */
+    z-index: 10002 !important;
   }
   
   .hero .hero-actions {
-    margin-top: 0 !important; /* Margin'i kaldır */
+    margin-top: 0 !important;
   }
   
   /* Social links inside hero-actions for small phones */
@@ -1260,9 +1261,10 @@ h6 {
     align-items: center !important;
     justify-content: center !important;
     box-sizing: border-box !important;
-    padding-top: 80px !important;
+    padding-top: 210px !important;
     padding-bottom: 20px !important;
   }
+}
   
   .section-title h2 {
     font-size: 1.8rem;
