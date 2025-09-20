@@ -589,6 +589,45 @@
   window.addEventListener('load', initMobileVideoTitles);
 
   /**
+   * Lazy loading for video thumbnails - Performance optimization
+   */
+  function initLazyLoading() {
+    const videoEmbeds = document.querySelectorAll('.video-embed');
+    if (videoEmbeds.length === 0) return;
+
+    // Set initial state
+    videoEmbeds.forEach(video => {
+      video.setAttribute('data-loaded', 'false');
+    });
+
+    // Intersection Observer for lazy loading
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const video = entry.target;
+          const bgImage = video.style.backgroundImage;
+          
+          if (bgImage && bgImage !== 'none') {
+            video.setAttribute('data-loaded', 'true');
+            video.style.setProperty('--bg-image', bgImage);
+            observer.unobserve(video);
+          }
+        }
+      });
+    }, {
+      rootMargin: '50px 0px', // Load 50px before entering viewport
+      threshold: 0.1
+    });
+
+    // Observe all video embeds
+    videoEmbeds.forEach(video => {
+      observer.observe(video);
+    });
+  }
+
+  window.addEventListener('load', initLazyLoading);
+
+  /**
    * Contact Form - Web3Forms Integration
    */
   const contactForm = document.getElementById('contactForm');

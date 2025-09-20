@@ -955,7 +955,7 @@ h6 {
   }
   
   .hero .hero-actions {
-    margin-top: 200px !important;
+    margin-top: 300px !important;
   }
   
   /* Hero section padding for fixed header */
@@ -2023,7 +2023,7 @@ html, body, .page, .main, .hero, .header, .footer {
   display: flex;
   gap: 1rem;
   margin-bottom: 3rem;
-  margin-top: 4rem;
+  margin-top: 8rem;
 }
 
 .hero .hero-actions .btn {
@@ -4341,6 +4341,16 @@ html, body, .page, .main, .hero, .header, .footer {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: #f5f5f5;
+}
+
+/* Lazy loading for video thumbnails */
+.video-embed[data-loaded="false"] {
+  background-image: none !important;
+}
+
+.video-embed[data-loaded="true"] {
+  background-image: var(--bg-image) !important;
 }
 
 /* Remove the ::before pseudo-element for background */
@@ -4392,6 +4402,27 @@ html, body, .page, .main, .hero, .header, .footer {
 .portfolio .row.gy-4 { 
   --bs-gutter-y: 2rem; 
   --bs-gutter-x: 2rem;
+}
+
+/* Performance optimizations for Works page */
+.portfolio-page .video-embed {
+  will-change: transform;
+  transform: translateZ(0); /* Force hardware acceleration */
+}
+
+.portfolio-page .portfolio-item {
+  contain: layout style paint; /* CSS containment for better performance */
+}
+
+/* Reduce animations on slower devices */
+@media (prefers-reduced-motion: reduce) {
+  .video-embed {
+    transition: none !important;
+  }
+  
+  .portfolio-item {
+    transition: none !important;
+  }
 }
 
 .portfolio .portfolio-item {
