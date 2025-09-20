@@ -1053,6 +1053,10 @@ h6 {
     margin-top: 10px !important;
     justify-content: center !important;
     gap: 12px !important;
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
   }
   
   .hero .hero-actions .social-links a {
@@ -1242,6 +1246,10 @@ h6 {
     margin-top: 8px !important;
     justify-content: center !important;
     gap: 10px !important;
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
   }
   
   .hero .hero-actions .social-links a {
