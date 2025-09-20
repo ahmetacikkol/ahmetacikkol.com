@@ -1048,6 +1048,18 @@ h6 {
     margin-top: 0 !important; /* Margin'i kaldır */
   }
   
+  /* Social links inside hero-actions for mobile */
+  .hero .hero-actions .social-links {
+    margin-top: 10px !important;
+    justify-content: center !important;
+    gap: 12px !important;
+  }
+  
+  .hero .hero-actions .social-links a {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 14px !important;
+  }
   
   /* Hide footer on mobile home page */
   .footer {
@@ -1225,6 +1237,18 @@ h6 {
     margin-top: 0 !important; /* Margin'i kaldır */
   }
   
+  /* Social links inside hero-actions for small phones */
+  .hero .hero-actions .social-links {
+    margin-top: 8px !important;
+    justify-content: center !important;
+    gap: 10px !important;
+  }
+  
+  .hero .hero-actions .social-links a {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 13px !important;
+  }
   
   /* Hide footer on small phones home page */
   .footer {
@@ -1976,10 +2000,17 @@ html, body, .page, .main, .hero, .header, .footer {
 @media (max-width: 576px) {
   .hero .hero-actions {
     flex-direction: column;
+    align-items: center;
   }
 
   .hero .hero-actions .btn {
     text-align: center;
+  }
+  
+  .hero .hero-actions .social-links {
+    margin-top: 12px !important;
+    display: flex !important;
+    justify-content: center !important;
   }
 }
 
