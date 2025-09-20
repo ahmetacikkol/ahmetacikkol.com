@@ -806,7 +806,7 @@ h6 {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    padding-top: 100px !important;
+    padding-top: 90px !important;
   }
 
   .contact-page .container {
@@ -1059,7 +1059,7 @@ h6 {
   
   /* Contact page specific for iPhone 12/13/14 */
   .contact-page .contact.section {
-    padding-top: 110px !important;
+    padding-top: 100px !important;
     align-items: center !important;
   }
   .hero .hero-content { 
@@ -1269,7 +1269,7 @@ h6 {
   
   /* Contact page specific for small phones */
   .contact-page .contact.section {
-    padding-top: 105px !important;
+    padding-top: 95px !important;
     align-items: center !important;
   }
   
@@ -2086,7 +2086,7 @@ html, body, .page, .main, .hero, .header, .footer {
   
   /* Contact page specific for large iPhones */
   .contact-page .contact.section {
-    padding-top: 115px !important;
+    padding-top: 105px !important;
     align-items: center !important;
   }
   
