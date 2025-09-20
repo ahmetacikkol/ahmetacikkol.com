@@ -96,7 +96,7 @@
    */
   function aosInit() {
     AOS.init({
-      duration: 600,
+      duration: 400, // Reduced from 600ms to 400ms
       easing: 'ease-in-out',
       once: true,
       mirror: false
@@ -227,7 +227,7 @@
   window.addEventListener("load", initSwiper);
 
   /**
-   * Init isotope layout and filters
+   * Init isotope layout and filters - OPTIMIZED
    */
   document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
@@ -235,13 +235,18 @@
     let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
     let initIsotope;
+    
+    // Initialize Isotope immediately, then update when images load
+    initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
+      itemSelector: '.isotope-item',
+      layoutMode: layout,
+      filter: filter,
+      sortBy: sort
+    });
+    
+    // Update layout when images finish loading
     imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
-      initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
-        itemSelector: '.isotope-item',
-        layoutMode: layout,
-        filter: filter,
-        sortBy: sort
-      });
+      initIsotope.layout();
     });
 
     isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
