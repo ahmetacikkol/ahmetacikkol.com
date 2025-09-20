@@ -405,27 +405,6 @@ h6 {
   display: none !important;
 }
 
-/* Home page inline credits */
-.home-credits {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 110px; /* bottom mask (100px) üstünde kalsın */
-  text-align: center;
-  font-size: 12px;
-  line-height: 1.6;
-  color: var(--default-color);
-  z-index: 20001; /* mask'in üstünde */
-}
-
-.home-credits a {
-  color: var(--accent-color);
-  text-decoration: none;
-}
-
-.home-credits a:hover {
-  text-decoration: underline;
-}
 
 /* Language Flag Dropdown */
 .lang-dropdown { position: relative; display: inline-block; margin-left: 8px; }
@@ -1069,10 +1048,6 @@ h6 {
     margin-top: 0 !important; /* Margin'i kaldır */
   }
   
-  /* Hide copyright on mobile */
-  .home-credits {
-    display: none !important;
-  }
   
   /* Adjust footer for mobile */
   .footer {
@@ -1183,10 +1158,6 @@ h6 {
     padding: 30px 0 140px 0;
   }
   
-  .home-credits {
-    bottom: 100px;
-    font-size: 11px;
-  }
   
   /* Portfolio adjustments */
   .portfolio .portfolio-filters {
@@ -1245,10 +1216,6 @@ h6 {
     margin-top: 0 !important; /* Margin'i kaldır */
   }
   
-  /* Hide copyright on small phones too */
-  .home-credits {
-    display: none !important;
-  }
   
   /* Adjust footer for small phones */
   .footer {
