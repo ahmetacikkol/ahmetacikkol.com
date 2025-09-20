@@ -4349,6 +4349,13 @@ html, body, .page, .main, .hero, .header, .footer {
   opacity: 1;
 }
 
+/* Disable hover effects on mobile */
+@media (max-width: 768px) {
+  .video-embed:hover::after {
+    opacity: 1 !important;
+  }
+}
+
 /* Hide iframe completely - pure thumbnail approach */
 .video-embed iframe {
   display: none;
@@ -4531,6 +4538,25 @@ html, body, .page, .main, .hero, .header, .footer {
   
   .portfolio .portfolio-item .portfolio-info h4 {
     color: white !important;
+  }
+  
+  /* Video embed titles - Always visible on mobile */
+  .video-embed::after {
+    opacity: 1 !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+    padding: 10px !important;
+    border-radius: 4px !important;
+    margin: 10px !important;
+    width: calc(100% - 20px) !important;
+    height: auto !important;
+    top: auto !important;
+    bottom: 10px !important;
+    left: 10px !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
     font-size: 0.85rem !important;
     margin-bottom: 0 !important;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
