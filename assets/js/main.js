@@ -494,4 +494,59 @@
   // Initialize video embeds when page loads
   window.addEventListener('load', initVideoEmbeds);
 
+  /**
+   * Contact Form - Web3Forms Integration
+   */
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(contactForm);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: json
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          // Show success message
+          const sentMessage = contactForm.querySelector('.sent-message');
+          sentMessage.innerHTML = 'Your message has been sent. Thank you!';
+          sentMessage.style.display = 'block';
+          sentMessage.style.color = '#059652';
+          
+          // Reset form
+          contactForm.reset();
+          
+          // Hide message after 5 seconds
+          setTimeout(() => {
+            sentMessage.style.display = 'none';
+          }, 5000);
+        } else {
+          throw new Error(result.message || 'Form submission failed');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        const sentMessage = contactForm.querySelector('.sent-message');
+        sentMessage.innerHTML = 'There was an error sending your message. Please try again.';
+        sentMessage.style.display = 'block';
+        sentMessage.style.color = '#e74c3c';
+        
+        setTimeout(() => {
+          sentMessage.style.display = 'none';
+        }, 5000);
+      }
+    });
+  }
+
 })();
