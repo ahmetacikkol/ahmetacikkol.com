@@ -1851,13 +1851,19 @@ html, body, .page, .main, .hero, .header, .footer {
 }
 
 .index-page .hero .hero-actions { 
-  margin-top: 200px !important; 
+  margin-top: 30px !important; 
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .index-page .hero .social-links {
   margin-top: 1rem !important; /* spacing below buttons */
   position: relative !important;
   z-index: 10 !important;
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .hero .hero-content h1 {
