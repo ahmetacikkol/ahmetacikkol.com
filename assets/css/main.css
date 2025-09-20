@@ -1023,10 +1023,27 @@ h6 {
 
 /* iPhone 12/13/14 Specific (390x844) */
 @media screen and (max-width: 390px) {
-  .hero { padding-top: 240px !important; }
-  .hero .hero-content h1 { margin-top: 60px !important; }
+  .hero { 
+    padding-top: 280px !important; 
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+  }
+  .hero .hero-content { 
+    margin-top: 0 !important; 
+    padding-top: 0 !important; 
+  }
+  .hero .hero-content h1 { 
+    margin-top: 0 !important; 
+    margin-bottom: 25px !important;
+    position: static !important;
+  }
   
-  .hero .hero-content h2 { margin-top: 40px !important; }
+  .hero .hero-content h2 { 
+    margin-top: 0 !important; 
+    margin-bottom: 25px !important;
+    position: static !important;
+  }
   
   .hero .hero-actions {
     margin-top: 0 !important; /* Margin'i kaldır */
@@ -1060,11 +1077,16 @@ h6 {
     min-height: 100vh !important;
     min-height: -webkit-fill-available !important;
     display: flex !important;
-    align-items: center !important;
+    align-items: flex-start !important;
     justify-content: center !important;
     box-sizing: border-box !important;
-    padding-top: 220px !important;
+    padding-top: 250px !important;
     padding-bottom: 20px !important;
+  }
+  
+  .hero .hero-content {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
   }
   
   /* Better spacing for mobile */
