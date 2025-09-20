@@ -506,27 +506,36 @@
 
     const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
 
-    const onScroll = () => {
+    let ticking = false;
+    const easeOut = (t) => 1 - Math.pow(1 - t, 3); // smooth cubic ease
+
+    const update = () => {
       const viewportCenter = window.innerHeight / 2;
       portfolioItems.forEach((item) => {
         const rect = item.getBoundingClientRect();
         const itemCenter = rect.top + rect.height / 2;
         const distance = Math.abs(itemCenter - viewportCenter);
 
-        // Normalize distance (0 near center, 1 far)
         const normalized = clamp(distance / (window.innerHeight * 0.75), 0, 1);
-        // Scale from 1.08 at center → 0.94 when far
-        const scale = 1.08 - normalized * 0.14;
-        const opacity = 1 - normalized * 0.1;
+        const eased = easeOut(1 - normalized);
+        const scale = 0.94 + eased * 0.14; // 0.94 → 1.08
+        const opacity = 0.9 + eased * 0.1; // 0.9 → 1.0
 
-        item.style.transform = `scale(${scale})`;
+        item.style.transform = `translateZ(0) scale(${scale})`;
         item.style.opacity = `${opacity}`;
-        item.style.transition = 'transform 120ms linear, opacity 120ms linear';
         item.style.willChange = 'transform, opacity';
       });
+      ticking = false;
     };
 
-    onScroll();
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(update);
+        ticking = true;
+      }
+    };
+
+    update();
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onScroll);
   }

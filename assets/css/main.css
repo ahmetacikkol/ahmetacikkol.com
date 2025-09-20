@@ -1023,27 +1023,10 @@ h6 {
 
 /* iPhone 12/13/14 Specific (390x844) */
 @media screen and (max-width: 390px) {
-  /* Typography adjustments for iPhone 12/13/14 */
-  .hero .hero-content h1 {
-    font-size: 1.9rem !important;
-    margin-top: 40px !important;
-    margin-bottom: 20px !important; /* H1 ile H2 arasına boşluk */
-  }
+  .hero { padding-top: 100px !important; }
+  .hero .hero-content h1 { margin-top: 28px !important; }
   
-  .hero .hero-content h2 {
-    font-size: 0.8rem !important; /* Font biraz büyüt */
-    max-height: 180px !important; /* DAHA BÜYÜK yükseklik */
-    overflow: visible !important; /* Taşan yazıları göster */
-    display: block !important;
-    line-height: 1.2 !important; /* Satır aralığı */
-    padding: 0 !important; /* Padding kaldır */
-    margin-bottom: 20px !important;
-    text-align: center !important;
-    border: none !important; /* Border kaldır */
-    background: none !important; /* Arka plan kaldır */
-    position: relative !important;
-    z-index: 10002 !important; /* Mask'ın üstünde olsun */
-  }
+  .hero .hero-content h2 { margin-top: 14px !important; }
   
   .hero .hero-actions {
     margin-top: 0 !important; /* Margin'i kaldır */
@@ -3597,7 +3580,7 @@ html, body, .page, .main, .hero, .header, .footer {
 
 @media (max-width: 768px) {
   .portfolio {
-    padding-top: 70px !important;
+    padding-top: 92px !important; /* header + filter spacing */
   }
   
   .portfolio .portfolio-filters {
