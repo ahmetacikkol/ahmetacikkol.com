@@ -543,6 +543,52 @@
   window.addEventListener('load', initPortfolioScrollScaling);
 
   /**
+   * Mobile video title detection - Show titles when videos are in center of viewport
+   */
+  function initMobileVideoTitles() {
+    // Only run on mobile
+    if (window.innerWidth > 768) return;
+    
+    const videoEmbeds = document.querySelectorAll('.video-embed');
+    if (videoEmbeds.length === 0) return;
+
+    let ticking = false;
+    
+    function updateVideoTitles() {
+      const viewportHeight = window.innerHeight;
+      const viewportCenter = viewportHeight / 2;
+      
+      videoEmbeds.forEach(video => {
+        const rect = video.getBoundingClientRect();
+        const videoCenter = rect.top + (rect.height / 2);
+        const distanceFromCenter = Math.abs(videoCenter - viewportCenter);
+        
+        // Show title if video is within 200px of viewport center
+        if (distanceFromCenter < 200) {
+          video.classList.add('in-view');
+        } else {
+          video.classList.remove('in-view');
+        }
+      });
+      
+      ticking = false;
+    }
+    
+    function onScroll() {
+      if (!ticking) {
+        requestAnimationFrame(updateVideoTitles);
+        ticking = true;
+      }
+    }
+    
+    updateVideoTitles();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+  }
+
+  window.addEventListener('load', initMobileVideoTitles);
+
+  /**
    * Contact Form - Web3Forms Integration
    */
   const contactForm = document.getElementById('contactForm');
