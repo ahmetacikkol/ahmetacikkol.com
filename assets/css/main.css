@@ -4344,13 +4344,13 @@ html, body, .page, .main, .hero, .header, .footer {
   background-color: #f5f5f5;
 }
 
-/* Lazy loading for video thumbnails */
+/* Lazy loading for video thumbnails - DISABLED for now */
 .video-embed[data-loaded="false"] {
-  background-image: none !important;
+  /* background-image: none !important; */
 }
 
 .video-embed[data-loaded="true"] {
-  background-image: var(--bg-image) !important;
+  /* background-image: var(--bg-image) !important; */
 }
 
 /* Remove the ::before pseudo-element for background */
