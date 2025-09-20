@@ -2026,8 +2026,6 @@ html, body, .page, .main, .hero, .header, .footer {
     right: 0 !important;
     z-index: 997 !important;
     height: 60px !important;
-    background: rgba(0, 0, 0, 0.8) !important;
-    backdrop-filter: blur(10px) !important;
   }
   
   /* Hero section accounting for header */
