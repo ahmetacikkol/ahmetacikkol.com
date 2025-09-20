@@ -955,7 +955,7 @@ h6 {
   }
   
   .hero .hero-actions {
-    margin-top: 150px !important;
+    margin-top: 200px !important;
   }
   
   .hero .social-links a {
@@ -1017,7 +1017,7 @@ h6 {
   }
   
   .hero .hero-actions {
-    margin-top: 120px !important;
+    margin-top: 180px !important;
   }
 }
 
@@ -1996,6 +1996,7 @@ html, body, .page, .main, .hero, .header, .footer {
   display: flex;
   gap: 1rem;
   margin-bottom: 3rem;
+  margin-top: 4rem;
 }
 
 .hero .hero-actions .btn {
