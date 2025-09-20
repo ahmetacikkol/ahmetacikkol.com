@@ -495,6 +495,45 @@
   window.addEventListener('load', initVideoEmbeds);
 
   /**
+   * Works page: scale portfolio items based on distance to viewport center
+   */
+  function initPortfolioScrollScaling() {
+    const isPortfolioPage = document.body.classList.contains('portfolio-page');
+    if (!isPortfolioPage) return;
+
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    if (portfolioItems.length === 0) return;
+
+    const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
+    const onScroll = () => {
+      const viewportCenter = window.innerHeight / 2;
+      portfolioItems.forEach((item) => {
+        const rect = item.getBoundingClientRect();
+        const itemCenter = rect.top + rect.height / 2;
+        const distance = Math.abs(itemCenter - viewportCenter);
+
+        // Normalize distance (0 near center, 1 far)
+        const normalized = clamp(distance / (window.innerHeight * 0.75), 0, 1);
+        // Scale from 1.08 at center → 0.94 when far
+        const scale = 1.08 - normalized * 0.14;
+        const opacity = 1 - normalized * 0.1;
+
+        item.style.transform = `scale(${scale})`;
+        item.style.opacity = `${opacity}`;
+        item.style.transition = 'transform 120ms linear, opacity 120ms linear';
+        item.style.willChange = 'transform, opacity';
+      });
+    };
+
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+  }
+
+  window.addEventListener('load', initPortfolioScrollScaling);
+
+  /**
    * Contact Form - Web3Forms Integration
    */
   const contactForm = document.getElementById('contactForm');
