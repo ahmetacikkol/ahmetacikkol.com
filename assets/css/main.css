@@ -1007,12 +1007,13 @@ h6 {
   /* Typography adjustments */
   .hero .hero-content h1 {
     font-size: 2rem !important;
-    margin-top: -80px !important;
+    margin-top: 20px !important;
   }
   
   .hero .hero-content h2 {
     font-size: 1.1rem !important;
     min-height: 150px !important;
+    margin-top: 20px !important;
   }
   
   .hero .hero-actions {
@@ -1025,7 +1026,7 @@ h6 {
   /* Typography adjustments for iPhone 12/13/14 */
   .hero .hero-content h1 {
     font-size: 1.9rem !important;
-    margin-top: -70px !important;
+    margin-top: 40px !important;
     margin-bottom: 20px !important; /* H1 ile H2 arasına boşluk */
   }
   
@@ -3596,7 +3597,7 @@ html, body, .page, .main, .hero, .header, .footer {
 
 @media (max-width: 768px) {
   .portfolio {
-    padding-top: 80px !important;
+    padding-top: 70px !important;
   }
   
   .portfolio .portfolio-filters {
@@ -3607,6 +3608,18 @@ html, body, .page, .main, .hero, .header, .footer {
     margin-bottom: 20px;
     padding: 0 15px;
     -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Mobile hover effects for portfolio filters */
+  .portfolio .portfolio-filters li {
+    transition: all 0.3s ease !important;
+  }
+  
+  .portfolio .portfolio-filters li:hover,
+  .portfolio .portfolio-filters li:active,
+  .portfolio .portfolio-filters li:focus {
+    color: var(--accent-color) !important;
+    transform: translateY(-2px) !important;
   }
 }
 
@@ -4478,5 +4491,36 @@ html, body, .page, .main, .hero, .header, .footer {
   /* If a stray fixed icon appears (e.g., scroll-top), hide it on portfolio page desktop */
   .portfolio-page #scroll-top {
     display: none !important;
+  }
+}
+
+/* Mobile video titles - Always visible overlay */
+@media (max-width: 768px) {
+  .portfolio .portfolio-item {
+    position: relative;
+  }
+  
+  .portfolio .portfolio-item .portfolio-info {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)) !important;
+    color: white !important;
+    padding: 15px 10px !important;
+    text-align: center !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+  
+  .portfolio .portfolio-item .portfolio-info h4 {
+    color: white !important;
+    font-size: 0.85rem !important;
+    margin-bottom: 0 !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+  }
+  
+  .portfolio .portfolio-item img {
+    border-radius: 8px !important;
   }
 }
