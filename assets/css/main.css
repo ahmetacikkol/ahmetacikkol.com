@@ -1049,9 +1049,18 @@ h6 {
   }
   
   
-  /* Adjust footer for mobile */
+  /* Hide footer on mobile home page */
   .footer {
-    padding: 20px 0 80px 0;
+    display: none !important;
+  }
+  
+  /* Full screen home page for mobile */
+  .hero {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
   
   /* Better spacing for mobile */
@@ -1217,9 +1226,18 @@ h6 {
   }
   
   
-  /* Adjust footer for small phones */
+  /* Hide footer on small phones home page */
   .footer {
-    padding: 20px 0 80px 0;
+    display: none !important;
+  }
+  
+  /* Full screen home page for small phones */
+  .hero {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
   
   .section-title h2 {
