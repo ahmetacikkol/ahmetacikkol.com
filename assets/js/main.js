@@ -92,17 +92,21 @@
   document.addEventListener('scroll', toggleScrollTop);
 
   /**
-   * Animation on scroll function and init
+   * Animation on scroll function and init - OPTIMIZED
    */
   function aosInit() {
     AOS.init({
-      duration: 400, // Reduced from 600ms to 400ms
-      easing: 'ease-in-out',
+      duration: 300, // Even faster
+      easing: 'ease-out', // Faster easing
       once: true,
-      mirror: false
+      mirror: false,
+      offset: 50, // Start animations earlier
+      delay: 0 // No delay
     });
   }
-  window.addEventListener('load', aosInit);
+  
+  // Start AOS immediately, don't wait for load
+  document.addEventListener('DOMContentLoaded', aosInit);
 
   /**
    * Typed Animation System
@@ -227,7 +231,7 @@
   window.addEventListener("load", initSwiper);
 
   /**
-   * Init isotope layout and filters - OPTIMIZED
+   * Init isotope layout and filters - ULTRA OPTIMIZED
    */
   document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
@@ -235,19 +239,27 @@
     let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
     let initIsotope;
+    const container = isotopeItem.querySelector('.isotope-container');
     
-    // Initialize Isotope immediately, then update when images load
-    initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
+    // Show container immediately
+    container.classList.add('loaded');
+    
+    // Initialize Isotope immediately with faster settings
+    initIsotope = new Isotope(container, {
       itemSelector: '.isotope-item',
       layoutMode: layout,
       filter: filter,
-      sortBy: sort
+      sortBy: sort,
+      transitionDuration: '0.2s', // Faster transitions
+      stagger: 0 // No stagger delay
     });
     
-    // Update layout when images finish loading
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
-      initIsotope.layout();
-    });
+    // Update layout when images finish loading (non-blocking)
+    if (typeof imagesLoaded !== 'undefined') {
+      imagesLoaded(container, function() {
+        initIsotope.layout();
+      });
+    }
 
     isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
       filters.addEventListener('click', function() {

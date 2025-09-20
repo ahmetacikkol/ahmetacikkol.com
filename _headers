@@ -1,0 +1,30 @@
+# GitHub Pages Performance Headers
+/assets/vendor/bootstrap/css/bootstrap.min.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/vendor/bootstrap-icons/bootstrap-icons.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/vendor/aos/aos.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/vendor/isotope-layout/isotope.pkgd.min.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/vendor/aos/aos.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/css/main.css
+  Cache-Control: public, max-age=86400
+
+/assets/js/main.js
+  Cache-Control: public, max-age=86400
+
+/assets/img/portfolio/*
+  Cache-Control: public, max-age=31536000, immutable
+
+portfolio.html
+  Cache-Control: public, max-age=3600
