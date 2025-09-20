@@ -955,25 +955,12 @@ h6 {
   }
   
   .hero .hero-actions {
-    margin-top: auto !important;
-    margin-bottom: 0 !important;
+    margin-top: 200px !important;
   }
   
   /* Hero section padding for fixed header */
   .hero {
     padding-top: 80px !important;
-    min-height: 100vh !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    padding-bottom: 2rem !important;
-  }
-  
-  .hero .hero-content {
-    flex: 1 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
   }
   
   .hero .social-links a {
@@ -2036,31 +2023,7 @@ html, body, .page, .main, .hero, .header, .footer {
   display: flex;
   gap: 1rem;
   margin-bottom: 3rem;
-  margin-top: 8rem;
-}
-
-/* Desktop and iPad - Move Get In Touch to bottom */
-@media screen and (min-width: 768px) {
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: 2rem;
-  }
-  
-  .hero .hero-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .hero .hero-actions {
-    margin-top: auto !important;
-    margin-bottom: 0 !important;
-    align-self: center;
-  }
+  margin-top: 4rem;
 }
 
 .hero .hero-actions .btn {
