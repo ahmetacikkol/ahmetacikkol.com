@@ -958,6 +958,11 @@ h6 {
     margin-top: 200px !important;
   }
   
+  /* Hero section padding for fixed header */
+  .hero {
+    padding-top: 80px !important;
+  }
+  
   .hero .social-links a {
     width: 50px;
     height: 50px;
@@ -990,6 +995,17 @@ h6 {
   
   .mobile-nav-toggle {
     display: none !important;
+  }
+  
+  /* iPad Header - Always visible */
+  .header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 9999 !important;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(10px) !important;
   }
   
   .header .header-social-links {
