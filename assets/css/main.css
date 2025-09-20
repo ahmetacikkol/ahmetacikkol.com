@@ -1853,14 +1853,14 @@ html, body, .page, .main, .hero, .header, .footer {
 }
 
 .index-page .hero .hero-actions { 
-  margin-top: 30px !important; 
+  margin-top: 15px !important; 
   display: flex !important;
   visibility: visible !important;
   opacity: 1 !important;
 }
 
 .index-page .hero .social-links {
-  margin-top: 1rem !important; /* spacing below buttons */
+  margin-top: 0.5rem !important; /* spacing below buttons */
   position: relative !important;
   z-index: 10 !important;
   display: flex !important;
@@ -4545,8 +4545,8 @@ html, body, .page, .main, .hero, .header, .footer {
   body.index-page .hero,
   .index-page .hero,
   .hero {
-    padding-top: 35vh !important;
-    align-items: flex-start !important;
+    padding-top: 15vh !important;
+    align-items: center !important;
     justify-content: center !important;
   }
   
