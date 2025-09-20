@@ -979,6 +979,17 @@ h6 {
   .header .navmenu {
     order: 1;
     width: auto;
+    display: block !important;
+  }
+  
+  .header .navmenu ul {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .mobile-nav-toggle {
+    display: none !important;
   }
   
   .header .header-social-links {
