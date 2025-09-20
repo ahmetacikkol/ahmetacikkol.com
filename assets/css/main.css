@@ -4549,6 +4549,31 @@ html, body, .page, .main, .hero, .header, .footer {
     align-items: center !important;
     justify-content: center !important;
   }
+}
+
+/* MAX PHONES - iPhone 15 Pro Max, iPhone 16 Pro Max etc. */
+@media screen and (min-width: 430px) and (max-width: 767px) {
+  body.index-page .hero,
+  .index-page .hero,
+  .hero {
+    padding-top: 10vh !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  body.index-page .hero .hero-content h1,
+  .index-page .hero .hero-content h1,
+  .hero .hero-content h1 {
+    margin-top: -20px !important;
+    margin-bottom: 10px !important;
+  }
+  
+  body.index-page .hero .hero-content h2,
+  .index-page .hero .hero-content h2,
+  .hero .hero-content h2 {
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+  }
   
   body.index-page .hero .hero-content,
   .index-page .hero .hero-content,
