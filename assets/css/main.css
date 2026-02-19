@@ -769,9 +769,9 @@ h6 {
   display: none !important;
 }
 
-/* Portfolio açıklama yazılarını gizle */
+/* Portfolio açıklama yazılarını göster */
 .portfolio-page .episode-count {
-  display: none !important;
+  display: block !important;
 }
 
 /* Desktop'ta portfolio filter'ları eski haline getir - mobile override'ları iptal et */
@@ -4456,17 +4456,18 @@ html, body, .page, .main, .hero, .header, .footer {
 .portfolio-info {
   margin-top: 0.75rem;
   text-align: center;
+  padding: 0.5rem 0;
 }
 
 .episode-count {
   font-family: 'Montserrat', sans-serif !important;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  color: var(--default-color);
+  color: #000000;
   margin: 0;
-  opacity: 0.8;
+  opacity: 0.9;
   letter-spacing: 0.5px;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .portfolio .portfolio-item .portfolio-info {
