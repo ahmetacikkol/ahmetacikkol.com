@@ -4430,16 +4430,6 @@ html, body, .page, .main, .hero, .header, .footer {
 }
 
 /* Compact grid for TV Commercial */
-.portfolio-item.filter-strategy ~ .portfolio-item.filter-strategy {
-  /* Reduced spacing between TV Commercial items */
-}
-
-.portfolio .row.gy-4:has(.filter-strategy) {
-  --bs-gutter-y: 0.75rem;
-  --bs-gutter-x: 0.75rem;
-}
-
-/* Even more compact spacing for TV Commercial */
 .portfolio-item.filter-strategy {
   padding: 0.25rem;
 }
@@ -4543,11 +4533,6 @@ html, body, .page, .main, .hero, .header, .footer {
   
   .portfolio-item.filter-strategy .episode-count {
     font-size: 0.6rem;
-  }
-  
-  .portfolio .row.gy-4:has(.filter-strategy) {
-    --bs-gutter-y: 0.5rem;
-    --bs-gutter-x: 0.5rem;
   }
 }
 
