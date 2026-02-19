@@ -1032,6 +1032,11 @@ h6 {
 
 /* iPhone Optimizations */
 @media screen and (max-width: 767px) {
+  /* Background siyah */
+  html, body, body.index-page, body.portfolio-page, body.contact-page {
+    background: #000000 !important;
+  }
+  
   /* Typography adjustments */
   .hero .hero-content h1 {
     font-size: 1.8rem !important;
