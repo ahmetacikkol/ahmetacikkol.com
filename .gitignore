@@ -1,0 +1,13 @@
+# Ignore nested git repository
+ahmetacikkol.com/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
