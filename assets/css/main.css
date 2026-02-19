@@ -531,7 +531,7 @@ h6 {
   .navmenu li:hover>a:before,
   .navmenu .active:before {
     visibility: visible;
-    width: 25px;
+    width: 100%;
   }
 
   .navmenu li:hover>a,
@@ -1892,7 +1892,7 @@ html, body, .page, .main, .hero, .header, .footer {
 }
 
 .index-page .hero .hero-actions { 
-  margin-top: 15px !important; 
+  margin-top: 8rem !important; 
   display: flex !important;
   visibility: visible !important;
   opacity: 1 !important;
@@ -2035,7 +2035,7 @@ html, body, .page, .main, .hero, .header, .footer {
   display: flex;
   gap: 1rem;
   margin-bottom: 3rem;
-  margin-top: 4rem;
+  margin-top: 8rem;
 }
 
 .hero .hero-actions .btn {
