@@ -4816,10 +4816,7 @@ html, body, .page, .main, .hero, .header, .footer {
   }
   
   /* Show title when video is in center of viewport */
-  .video-embed.in-view::after {
-    opacity: 1 !important;
-    transform: translate(-50%, -50%) scale(1.05) !important;
-  }
+  /* Removed: .in-view class - titles now show only on tap */
   
   .portfolio .portfolio-item img {
     border-radius: 8px !important;
