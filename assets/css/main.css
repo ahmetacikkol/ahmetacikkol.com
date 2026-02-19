@@ -3804,11 +3804,12 @@ html, body, .page, .main, .hero, .header, .footer {
   transform: translateY(-5px);
 }
 
-.portfolio .portfolio-card .portfolio-info,
-.portfolio .portfolio-item .portfolio-info {
+.portfolio .portfolio-card .portfolio-info {
   padding: 20px;
   text-align: center;
 }
+
+/* REMOVED: .portfolio .portfolio-item .portfolio-info - using unified design instead */
 
 .portfolio .portfolio-card .portfolio-info h4 {
   font-size: 1.2rem;
@@ -4710,18 +4711,8 @@ html, body, .page, .main, .hero, .header, .footer {
   text-transform: none;
 }
 
-.portfolio .portfolio-item .portfolio-info {
-  padding: 1rem 0;
-  text-align: center;
-}
-
-.portfolio .portfolio-item .portfolio-info h4 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--heading-color);
-  margin: 0;
-  letter-spacing: -0.01em;
-}
+/* REMOVED: Conflicting rule - using .portfolio-item .portfolio-info instead */
+/* Portfolio info styling is now handled by unified design above */
 
 .contact .info-item .content h4 {
   color: var(--contrast-color);
