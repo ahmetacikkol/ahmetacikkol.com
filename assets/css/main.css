@@ -4429,6 +4429,21 @@ html, body, .page, .main, .hero, .header, .footer {
   --bs-gutter-x: 2rem;
 }
 
+/* Compact grid for TV Commercial */
+.portfolio-item.filter-strategy ~ .portfolio-item.filter-strategy {
+  /* Reduced spacing between TV Commercial items */
+}
+
+.portfolio .row.gy-4:has(.filter-strategy) {
+  --bs-gutter-y: 0.75rem;
+  --bs-gutter-x: 0.75rem;
+}
+
+/* Even more compact spacing for TV Commercial */
+.portfolio-item.filter-strategy {
+  padding: 0.25rem;
+}
+
 /* Performance optimizations for Works page */
 .portfolio-page .video-embed {
   will-change: transform;
@@ -4456,6 +4471,84 @@ html, body, .page, .main, .hero, .header, .footer {
   border: 0;
   padding: 0;
   margin-bottom: 2rem;
+}
+
+/* TV Commercial - Compact bubble design */
+.portfolio-item.filter-strategy {
+  margin-bottom: 0.75rem;
+  transition: transform 0.3s ease, z-index 0.3s ease;
+  position: relative;
+}
+
+.portfolio-item.filter-strategy .video-embed {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.3s ease,
+              border-radius 0.3s ease;
+  transform: scale(1);
+  will-change: transform;
+}
+
+.portfolio-item.filter-strategy:hover {
+  z-index: 10;
+}
+
+.portfolio-item.filter-strategy:hover .video-embed {
+  transform: scale(1.15);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+}
+
+.portfolio-item.filter-strategy .portfolio-info {
+  margin-top: 0.25rem;
+  padding: 0.15rem 0;
+}
+
+.portfolio-item.filter-strategy .episode-count {
+  font-size: 0.65rem;
+  opacity: 0.7;
+}
+
+/* Mobile adjustments for compact design */
+@media (max-width: 991px) {
+  .portfolio-item.filter-strategy .video-embed {
+    border-radius: 10px;
+  }
+  
+  .portfolio-item.filter-strategy:hover .video-embed {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 767px) {
+  .portfolio-item.filter-strategy {
+    margin-bottom: 0.5rem;
+    padding: 0.15rem;
+  }
+  
+  .portfolio-item.filter-strategy .video-embed {
+    border-radius: 8px;
+  }
+  
+  .portfolio-item.filter-strategy:hover .video-embed {
+    transform: scale(1.08);
+  }
+  
+  .portfolio-item.filter-strategy .portfolio-info {
+    margin-top: 0.2rem;
+    padding: 0.1rem 0;
+  }
+  
+  .portfolio-item.filter-strategy .episode-count {
+    font-size: 0.6rem;
+  }
+  
+  .portfolio .row.gy-4:has(.filter-strategy) {
+    --bs-gutter-y: 0.5rem;
+    --bs-gutter-x: 0.5rem;
+  }
 }
 
 /* Episode count styling */
