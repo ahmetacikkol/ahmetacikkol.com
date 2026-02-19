@@ -4431,8 +4431,14 @@ html, body, .page, .main, .hero, .header, .footer {
 
 @media (max-width: 767px) {
   .portfolio .row.gy-4 {
-    --bs-gutter-y: 0.5rem;
-    --bs-gutter-x: 0.5rem;
+    --bs-gutter-y: 0.4rem;
+    --bs-gutter-x: 0.4rem;
+  }
+  
+  /* Force smaller columns on mobile */
+  .portfolio-item[class*="col-"] {
+    padding-left: 0.2rem !important;
+    padding-right: 0.2rem !important;
   }
 }
 
@@ -4521,25 +4527,67 @@ html, body, .page, .main, .hero, .header, .footer {
 
 @media (max-width: 767px) {
   .portfolio-item {
-    margin-bottom: 0.5rem;
-    padding: 0.15rem;
+    margin-bottom: 0.4rem !important;
+    padding: 0.1rem !important;
   }
   
   .portfolio-item .video-embed {
     border-radius: 8px;
+    padding-bottom: 56.25% !important; /* Maintain aspect ratio */
   }
   
-  .portfolio-item:hover .video-embed {
-    transform: scale(1.08);
+  .portfolio-item:hover .video-embed,
+  .portfolio-item:active .video-embed {
+    transform: scale(1.05);
   }
   
   .portfolio-item .portfolio-info {
-    margin-top: 0.2rem;
-    padding: 0.1rem 0;
+    margin-top: 0.15rem !important;
+    padding: 0.05rem 0 !important;
   }
   
   .portfolio-item .episode-count {
-    font-size: 0.6rem;
+    font-size: 0.55rem !important;
+    line-height: 1.2 !important;
+    opacity: 0.8;
+  }
+  
+  /* Ensure grid works on mobile */
+  .portfolio .row {
+    margin-left: -0.2rem !important;
+    margin-right: -0.2rem !important;
+  }
+  
+  .portfolio .row > [class*="col-"] {
+    padding-left: 0.2rem !important;
+    padding-right: 0.2rem !important;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 575px) {
+  .portfolio .row.gy-4 {
+    --bs-gutter-y: 0.3rem;
+    --bs-gutter-x: 0.3rem;
+  }
+  
+  .portfolio-item {
+    margin-bottom: 0.3rem !important;
+    padding: 0.08rem !important;
+  }
+  
+  .portfolio-item .episode-count {
+    font-size: 0.5rem !important;
+  }
+  
+  .portfolio .row {
+    margin-left: -0.15rem !important;
+    margin-right: -0.15rem !important;
+  }
+  
+  .portfolio .row > [class*="col-"] {
+    padding-left: 0.15rem !important;
+    padding-right: 0.15rem !important;
   }
 }
 
