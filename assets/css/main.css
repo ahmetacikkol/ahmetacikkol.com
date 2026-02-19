@@ -4557,12 +4557,23 @@ html, body, .page, .main, .hero, .header, .footer {
 }
 
 @media (max-width: 767px) {
+  /* Ensure isotope items are properly displayed on mobile */
+  .isotope-item:not(.isotope-item-hidden) {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  .isotope-item.isotope-item-hidden {
+    display: none !important;
+  }
+  
   .portfolio-item {
     margin-bottom: 0.4rem !important;
     padding: 0.1rem !important;
     display: flex !important;
     flex-direction: column !important;
     height: auto !important;
+    width: 100% !important;
   }
   
   .portfolio-item .video-embed {
@@ -4611,6 +4622,17 @@ html, body, .page, .main, .hero, .header, .footer {
   /* Force equal heights for all portfolio items */
   .portfolio-item {
     align-items: stretch !important;
+  }
+  
+  /* Prevent content overflow */
+  .isotope-container {
+    overflow: visible !important;
+  }
+  
+  /* Ensure proper spacing between filtered sections */
+  .isotope-item.filter-finance:not(.isotope-item-hidden) ~ .isotope-item.filter-strategy:not(.isotope-item-hidden),
+  .isotope-item.filter-strategy:not(.isotope-item-hidden) ~ .isotope-item.filter-finance:not(.isotope-item-hidden) {
+    margin-top: 0 !important;
   }
 }
 
