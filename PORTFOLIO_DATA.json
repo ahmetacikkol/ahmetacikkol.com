@@ -1,0 +1,342 @@
+{
+  "portfolio": {
+    "categories": [
+      {
+        "id": "filter-series",
+        "name": "Tv Series",
+        "items": [
+          {
+            "title": "Dönmek İçin Eve",
+            "vimeoId": "1166409513",
+            "image": "assets/img/portfolio/donmek-icin-eve.png",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "The Club",
+            "vimeoId": "1118364548",
+            "image": "assets/img/portfolio/tv-series.jpg",
+            "role": "Cinematographer Season 2"
+          },
+          {
+            "title": "Masumiyet Müzesi",
+            "vimeoId": "1166440413",
+            "image": "assets/img/portfolio/masumiyet-muzesi.png",
+            "role": "Additional Cinematographer and A Cam Operator"
+          }
+        ]
+      },
+      {
+        "id": "filter-strategy",
+        "name": "Tv-Commercial",
+        "default": true,
+        "items": [
+          {
+            "title": "Flormar",
+            "vimeoId": "1166452885",
+            "image": "assets/img/portfolio/flormar.png",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Yeni Rakı",
+            "vimeoId": "1166449949",
+            "image": "assets/img/portfolio/yeni-raki.png",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Çamlıca Gazoz",
+            "vimeoId": "1166450524",
+            "image": "assets/img/portfolio/camlica-gazoz.png",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Apple Trendyol",
+            "vimeoId": "1117944885",
+            "image": "assets/img/portfolio/apple-trendyol-1.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Apple Trendyol",
+            "vimeoId": "1117944853",
+            "image": "assets/img/portfolio/apple-trendyol-2.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Shell",
+            "vimeoId": "1117943770",
+            "image": "assets/img/portfolio/shell.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Petrol Ofisi",
+            "vimeoId": "1117943574",
+            "image": "assets/img/portfolio/petrol-ofisi.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Evren Kayar",
+            "vimeoId": "1117942745",
+            "image": "assets/img/portfolio/evren-kayar.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Moeva",
+            "vimeoId": "1117942948",
+            "image": "assets/img/portfolio/moeva.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Otobid",
+            "vimeoId": "1117943523",
+            "image": "assets/img/portfolio/otobid.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Boyner",
+            "vimeoId": "1117941644",
+            "image": "assets/img/portfolio/boyner.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Sanko",
+            "vimeoId": "1117943674",
+            "image": "assets/img/portfolio/sanko.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Nestle",
+            "vimeoId": "1117943485",
+            "image": "assets/img/portfolio/nestle.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Diablo 34",
+            "vimeoId": "1117942647",
+            "image": "assets/img/portfolio/diablo-34.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Vitruta",
+            "vimeoId": "1117945083",
+            "image": "assets/img/portfolio/vitruta.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Pınar Süt",
+            "vimeoId": "1117943629",
+            "image": "assets/img/portfolio/pinar-sut.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Cif",
+            "vimeoId": "1117941697",
+            "image": "assets/img/portfolio/cif.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Sephora",
+            "vimeoId": "1166459410",
+            "image": "assets/img/portfolio/sephora.png",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Vakkorama",
+            "vimeoId": "1117945055",
+            "image": "assets/img/portfolio/vakkorama-2.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Ford",
+            "vimeoId": "1117942847",
+            "image": "assets/img/portfolio/ford.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Algida",
+            "vimeoId": "1117941513",
+            "image": "assets/img/portfolio/algida.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Akbank",
+            "vimeoId": "1117941448",
+            "image": "assets/img/portfolio/akbank.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Allianz",
+            "vimeoId": "1117941584",
+            "image": "assets/img/portfolio/allianz.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Techno Mobile",
+            "vimeoId": "1117943885",
+            "image": "assets/img/portfolio/techno-mobile-1.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Techno Mobile",
+            "vimeoId": "1117944023",
+            "image": "assets/img/portfolio/techno-mobile-2.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Under Armour",
+            "vimeoId": "1117944916",
+            "image": "assets/img/portfolio/under-armor.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Sushida",
+            "vimeoId": "1117943846",
+            "image": "assets/img/portfolio/sushida.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Dürümle",
+            "vimeoId": "1166450781",
+            "image": "assets/img/portfolio/durumle.png",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Shell",
+            "vimeoId": "1118343868",
+            "image": "assets/img/portfolio/shell-2.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Land Rover",
+            "vimeoId": "1117942897",
+            "image": "assets/img/portfolio/land-rover.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "A101 AYSONU",
+            "vimeoId": "1166395268",
+            "image": "assets/img/portfolio/a101-aysonu.png",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "A101 Soğan",
+            "vimeoId": "1166395658",
+            "image": "assets/img/portfolio/a101-sogan.png",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "A101 Ayran",
+            "vimeoId": "1166394920",
+            "image": "assets/img/portfolio/a101-ayran.png",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Üstad",
+            "vimeoId": "1166451732",
+            "image": "assets/img/portfolio/ustad.png",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Vakkorama",
+            "vimeoId": "1117945022",
+            "image": "assets/img/portfolio/vakkorama-1.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Pepsico",
+            "vimeoId": "1166465941",
+            "image": "assets/img/portfolio/pepsico.png",
+            "role": "Cinematographer"
+          }
+        ]
+      },
+      {
+        "id": "filter-operations",
+        "name": "Unreal Engine",
+        "items": [
+          {
+            "title": "Ford Mustang Mach-E",
+            "vimeoId": "1118377028",
+            "image": "assets/img/portfolio/ford-mustang-mach-e.jpg",
+            "role": "Cinematographer, Look Designer, Lightning Artist"
+          },
+          {
+            "title": "Ford Edge",
+            "vimeoId": "1118377024",
+            "image": "assets/img/portfolio/ford-edge.jpg",
+            "role": "Cinematographer, Look Designer, Lightning Artist"
+          },
+          {
+            "title": "Ford Bronco",
+            "vimeoId": "1118377011",
+            "image": "assets/img/portfolio/ford-bronco.jpg",
+            "role": "Cinematographer, Look Designer, Lightning Artist"
+          }
+        ]
+      },
+      {
+        "id": "filter-finance",
+        "name": "Music Video",
+        "items": [
+          {
+            "title": "Tolani - Cry Baby",
+            "vimeoId": "1117944144",
+            "image": "assets/img/portfolio/tolani-cry-baby.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Muhiddin Aslanbay",
+            "vimeoId": "1117943293",
+            "image": "assets/img/portfolio/muhiddin_aslanbey.jpg",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "Jabbar",
+            "vimeoId": "1117941747",
+            "image": "assets/img/portfolio/jabbar.png",
+            "role": "Cinematographer"
+          },
+          {
+            "title": "KTS",
+            "vimeoId": "1118413815",
+            "image": "assets/img/portfolio/kts.jpg",
+            "role": "Second Dop"
+          },
+          {
+            "title": "SNAP",
+            "vimeoId": "1118413907",
+            "image": "assets/img/portfolio/snap.jpg",
+            "role": "Second Dop"
+          },
+          {
+            "title": "MANİFEST",
+            "vimeoId": "1118413666",
+            "image": "assets/img/portfolio/manifest.jpg",
+            "role": "Second Dop"
+          }
+        ]
+      }
+    ]
+  },
+  "socialMedia": {
+    "instagram": "https://instagram.com/ahmetacikkol",
+    "imdb": "https://www.imdb.com/name/nm5241768/",
+    "vimeo": "https://vimeo.com/ahmetacikkol/videos"
+  },
+  "contact": {
+    "formService": "Web3Forms",
+    "accessKey": "97c0e41e-ef48-4131-9813-5f401f5f9e6a",
+    "apiEndpoint": "https://api.web3forms.com/submit"
+  },
+  "siteInfo": {
+    "name": "Ahmet Açıkkol",
+    "title": "Cinematographer & Visual Storyteller",
+    "roles": [
+      "Cinematographer & Visual Storyteller",
+      "Look Creator",
+      "Lightning Designer",
+      "Live-Action • AI • Unreal Engine"
+    ],
+    "heroImage": "assets/img/hero-cover.png",
+    "logo": "assets/img/logo.webp",
+    "favicon": "assets/img/favicon.png"
+  }
+}
