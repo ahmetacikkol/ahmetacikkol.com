@@ -437,41 +437,58 @@
   // Video embed click functionality
   function initVideoEmbeds() {
     const videoEmbeds = document.querySelectorAll('.video-embed');
-    const isMobile = window.innerWidth <= 768;
+    const clickData = new Map(); // Store click state for each embed
+    
+    // Single click handler for outside clicks (more efficient)
+    let outsideClickHandler = null;
+    const isMobile = () => window.innerWidth <= 768;
     
     videoEmbeds.forEach(embed => {
-      let clickCount = 0;
-      let clickTimer = null;
+      const embedId = embed.getAttribute('data-vimeo-id') || embed.getAttribute('data-youtube-id') || Math.random();
+      clickData.set(embed, { count: 0, timer: null });
       
       embed.addEventListener('click', function(e) {
         const vimeoId = this.getAttribute('data-vimeo-id');
         const youtubeId = this.getAttribute('data-youtube-id');
         const title = this.getAttribute('data-title');
+        const data = clickData.get(this);
         
         // Mobile: Two-tap behavior (first tap shows title, second tap opens video)
-        if (isMobile || window.innerWidth <= 768) {
+        if (isMobile()) {
           e.preventDefault();
           e.stopPropagation();
           
           // Clear previous timer
-          if (clickTimer) {
-            clearTimeout(clickTimer);
+          if (data.timer) {
+            clearTimeout(data.timer);
           }
           
-          clickCount++;
+          data.count++;
           
-          if (clickCount === 1) {
+          if (data.count === 1) {
             // First tap: Show title overlay
             this.classList.add('show-title');
             
+            // Hide other titles
+            videoEmbeds.forEach(otherEmbed => {
+              if (otherEmbed !== this) {
+                const otherData = clickData.get(otherEmbed);
+                otherEmbed.classList.remove('show-title');
+                if (otherData.timer) {
+                  clearTimeout(otherData.timer);
+                }
+                otherData.count = 0;
+              }
+            });
+            
             // Reset click count after 2 seconds if no second tap
-            clickTimer = setTimeout(() => {
-              clickCount = 0;
+            data.timer = setTimeout(() => {
+              data.count = 0;
               this.classList.remove('show-title');
             }, 2000);
-          } else if (clickCount === 2) {
+          } else if (data.count === 2) {
             // Second tap: Open video
-            clickCount = 0;
+            data.count = 0;
             this.classList.remove('show-title');
             
             if (vimeoId) {
@@ -489,34 +506,41 @@
           }
         }
       });
-      
-      // Hide title when clicking outside on mobile
-      if (isMobile || window.innerWidth <= 768) {
-        document.addEventListener('click', function(e) {
-          if (!embed.contains(e.target)) {
-            embed.classList.remove('show-title');
-            clickCount = 0;
-            if (clickTimer) {
-              clearTimeout(clickTimer);
-            }
-          }
-        });
-      }
     });
+    
+    // Single outside click handler for all embeds
+    if (!outsideClickHandler) {
+      outsideClickHandler = function(e) {
+        if (isMobile()) {
+          videoEmbeds.forEach(embed => {
+            if (!embed.contains(e.target)) {
+              const data = clickData.get(embed);
+              embed.classList.remove('show-title');
+              if (data.timer) {
+                clearTimeout(data.timer);
+              }
+              data.count = 0;
+            }
+          });
+        }
+      };
+      document.addEventListener('click', outsideClickHandler);
+    }
     
     // Update on resize
     let resizeTimer;
     window.addEventListener('resize', function() {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(function() {
-        // Reinitialize if switching between mobile/desktop
-        const newIsMobile = window.innerWidth <= 768;
-        if (newIsMobile !== isMobile) {
-          // Reset all overlays
-          videoEmbeds.forEach(embed => {
-            embed.classList.remove('show-title');
-          });
-        }
+        // Reset all overlays when switching between mobile/desktop
+        videoEmbeds.forEach(embed => {
+          const data = clickData.get(embed);
+          embed.classList.remove('show-title');
+          if (data.timer) {
+            clearTimeout(data.timer);
+          }
+          data.count = 0;
+        });
       }, 250);
     });
   }
