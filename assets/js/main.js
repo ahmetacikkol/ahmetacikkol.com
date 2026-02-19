@@ -265,9 +265,25 @@
       filters.addEventListener('click', function() {
         isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
         this.classList.add('filter-active');
-        initIsotope.arrange({
-          filter: this.getAttribute('data-filter')
+        const filterValue = this.getAttribute('data-filter');
+        
+        // Clear any previous filter issues
+        const allItems = container.querySelectorAll('.isotope-item');
+        allItems.forEach(function(item) {
+          // Remove any manual visibility classes
+          item.classList.remove('visible', 'hidden');
         });
+        
+        // Apply isotope filter
+        initIsotope.arrange({
+          filter: filterValue
+        });
+        
+        // Force layout recalculation
+        setTimeout(function() {
+          initIsotope.layout();
+        }, 50);
+        
         if (typeof aosInit === 'function') {
           aosInit();
         }

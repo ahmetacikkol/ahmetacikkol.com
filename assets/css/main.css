@@ -4499,6 +4499,16 @@ html, body, .page, .main, .hero, .header, .footer {
   height: 100%;
 }
 
+/* Ensure isotope filtering works correctly - Isotope controls display */
+.isotope-item {
+  /* Let isotope control display */
+}
+
+/* Ensure proper layout when isotope shows items */
+.isotope-item:not(.isotope-item-hidden) {
+  display: flex !important;
+}
+
 .portfolio-item .video-embed {
   border-radius: 12px;
   overflow: hidden;
