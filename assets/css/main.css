@@ -4409,16 +4409,25 @@ html, body, .page, .main, .hero, .header, .footer {
   transition: opacity 0.3s ease;
   text-align: center;
   padding: 1rem;
+  pointer-events: none;
 }
 
 .video-embed:hover::after {
   opacity: 1;
 }
 
-/* Disable hover effects on mobile */
+/* Mobile: Hide overlay by default, show only when clicked */
 @media (max-width: 768px) {
-  .video-embed:hover::after {
+  .video-embed::after {
+    opacity: 0 !important;
+  }
+  
+  .video-embed.show-title::after {
     opacity: 1 !important;
+  }
+  
+  .video-embed:hover::after {
+    opacity: 0 !important;
   }
 }
 

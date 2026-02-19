@@ -437,19 +437,87 @@
   // Video embed click functionality
   function initVideoEmbeds() {
     const videoEmbeds = document.querySelectorAll('.video-embed');
+    const isMobile = window.innerWidth <= 768;
     
     videoEmbeds.forEach(embed => {
-      embed.addEventListener('click', function() {
+      let clickCount = 0;
+      let clickTimer = null;
+      
+      embed.addEventListener('click', function(e) {
         const vimeoId = this.getAttribute('data-vimeo-id');
         const youtubeId = this.getAttribute('data-youtube-id');
         const title = this.getAttribute('data-title');
         
-        if (vimeoId) {
-          openVideoModal(vimeoId, title, 'vimeo');
-        } else if (youtubeId) {
-          openVideoModal(youtubeId, title, 'youtube');
+        // Mobile: Two-tap behavior (first tap shows title, second tap opens video)
+        if (isMobile || window.innerWidth <= 768) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          // Clear previous timer
+          if (clickTimer) {
+            clearTimeout(clickTimer);
+          }
+          
+          clickCount++;
+          
+          if (clickCount === 1) {
+            // First tap: Show title overlay
+            this.classList.add('show-title');
+            
+            // Reset click count after 2 seconds if no second tap
+            clickTimer = setTimeout(() => {
+              clickCount = 0;
+              this.classList.remove('show-title');
+            }, 2000);
+          } else if (clickCount === 2) {
+            // Second tap: Open video
+            clickCount = 0;
+            this.classList.remove('show-title');
+            
+            if (vimeoId) {
+              openVideoModal(vimeoId, title, 'vimeo');
+            } else if (youtubeId) {
+              openVideoModal(youtubeId, title, 'youtube');
+            }
+          }
+        } else {
+          // Desktop: Direct click opens video (hover shows title)
+          if (vimeoId) {
+            openVideoModal(vimeoId, title, 'vimeo');
+          } else if (youtubeId) {
+            openVideoModal(youtubeId, title, 'youtube');
+          }
         }
       });
+      
+      // Hide title when clicking outside on mobile
+      if (isMobile || window.innerWidth <= 768) {
+        document.addEventListener('click', function(e) {
+          if (!embed.contains(e.target)) {
+            embed.classList.remove('show-title');
+            clickCount = 0;
+            if (clickTimer) {
+              clearTimeout(clickTimer);
+            }
+          }
+        });
+      }
+    });
+    
+    // Update on resize
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function() {
+        // Reinitialize if switching between mobile/desktop
+        const newIsMobile = window.innerWidth <= 768;
+        if (newIsMobile !== isMobile) {
+          // Reset all overlays
+          videoEmbeds.forEach(embed => {
+            embed.classList.remove('show-title');
+          });
+        }
+      }, 250);
     });
   }
   
@@ -603,7 +671,8 @@
     window.addEventListener('resize', onScroll);
   }
 
-  window.addEventListener('load', initMobileVideoTitles);
+  // Disabled: Mobile video titles now show only on tap
+  // window.addEventListener('load', initMobileVideoTitles);
 
   /**
    * Lazy loading for video thumbnails - DISABLED for now
