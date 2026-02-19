@@ -454,7 +454,7 @@
         const data = clickData.get(this);
         
         // Mobile: Two-tap behavior (first tap shows title, second tap opens video)
-        if (isMobile()) {
+        if (window.innerWidth <= 768) {
           e.preventDefault();
           e.stopPropagation();
           
@@ -511,7 +511,7 @@
     // Single outside click handler for all embeds
     if (!outsideClickHandler) {
       outsideClickHandler = function(e) {
-        if (isMobile()) {
+        if (window.innerWidth <= 768) {
           videoEmbeds.forEach(embed => {
             if (!embed.contains(e.target)) {
               const data = clickData.get(embed);
