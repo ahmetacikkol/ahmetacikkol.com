@@ -4634,6 +4634,20 @@ html, body, .page, .main, .hero, .header, .footer {
   .isotope-item.filter-strategy:not(.isotope-item-hidden) ~ .isotope-item.filter-finance:not(.isotope-item-hidden) {
     margin-top: 0 !important;
   }
+  
+  /* Fix scroll-top button positioning on mobile - move it higher to avoid content overlap */
+  .scroll-top {
+    bottom: 80px !important;
+    right: 15px !important;
+    z-index: 999 !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  /* Add bottom padding to portfolio container to prevent content cutoff */
+  .portfolio {
+    padding-bottom: 100px !important;
+  }
 }
 
 /* Extra small mobile devices */
