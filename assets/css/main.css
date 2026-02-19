@@ -19,12 +19,12 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #e8e8e8; /* Background color for the entire website, including individual sections - %18 Gray Card */
-  --default-color: #2c2c2c; /* Default color used for the majority of the text content across the entire website - Koyu gri */
-  --heading-color: #1a1a1a; /* Color for headings, subheadings and title throughout the website - Çok koyu gri */
+  --background-color: #000000; /* Background color for the entire website, including individual sections - Siyah */
+  --default-color: #ffffff; /* Default color used for the majority of the text content across the entire website - Beyaz */
+  --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website - Beyaz */
   --accent-color: #ff6b35; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out - Turuncu */
-  --surface-color: #e8e8e8; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. - %18 Gray Card */
-  --contrast-color: #1a1a1a; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. - Çok koyu gri */
+  --surface-color: #1a1a1a; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. - Koyu gri */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. - Beyaz */
 }
 
 
@@ -75,7 +75,7 @@ body::after {
 
 /* Homepage gets same background as other pages */
 body.index-page {
-  background: linear-gradient(to right, #f5e8dc 0%, #efe1d6 50%, #e7d6c8 100%) !important;
+  background: #000000 !important;
   overflow-y: hidden;
 }
 
@@ -83,7 +83,7 @@ body.index-page {
 body.portfolio-page,
 body.contact-page {
   color: var(--default-color);
-  background: linear-gradient(to right, #f5e8dc 0%, #efe1d6 50%, #e7d6c8 100%) !important;
+  background: #000000 !important;
   font-family: var(--default-font);
   position: relative;
 }
@@ -384,7 +384,7 @@ h6 {
 }
 
 .header .header-social-links a {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: #ffffff !important;
   padding: 3px;
   display: inline-block;
   transition: 0.3s;
@@ -392,7 +392,8 @@ h6 {
 }
 
 .header .header-social-links a:hover {
-  color: var(--default-color);
+  color: #ffffff !important;
+  opacity: 0.8;
 }
 
 .header .header-social-links a i {
@@ -752,16 +753,16 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  border: 1px solid #ffffff !important;
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: #ffffff !important;
   margin: 0 5px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
 }
 
 /* Works sayfasında footer'ı gizle */
@@ -1394,7 +1395,7 @@ h6 {
   
   /* Reduce complex gradients on mobile */
   body {
-    background: linear-gradient(to right, #f5e8dc 0%, #e7d6c8 100%) !important;
+    background: #000000 !important;
   }
 }
 
@@ -1641,7 +1642,7 @@ section,
 
 /* Düz Beyazdan Açık Griye Geçiş Background */
 body {
-  background: linear-gradient(to right, #f5e8dc 0%, #efe1d6 50%, #e7d6c8 100%) !important;
+  background: #000000 !important;
   background-image: none !important;
   position: relative !important;
 }
@@ -1787,9 +1788,9 @@ p, span, div, li, a {
   border: 1px solid #000000 !important;
 }
 
-/* Modern Siyah Font Style for Social Links */
+/* Modern Beyaz Font Style for Social Links */
 .social-links a, .header-social-links a {
-  color: #000000 !important;
+  color: #ffffff !important;
   text-shadow: none !important;
 }
 
@@ -1801,14 +1802,14 @@ p, span, div, li, a {
 
 /* Force simple linear gradient background with grain on all pages */
 html, body, .page, .main, .hero, .header, .footer {
-  background: linear-gradient(to right, #f5e8dc 0%, #efe1d6 50%, #e7d6c8 100%) !important;
+  background: #000000 !important;
   background-image: none !important;
 }
 
 /* Make Works and Contact pages match homepage background */
 .portfolio-page,
 .contact-page {
-  background: linear-gradient(to right, #f5e8dc 0%, #efe1d6 50%, #e7d6c8 100%) !important;
+  background: #000000 !important;
 }
 
 /* Match homepage subtle radial overlay on other pages */
@@ -2154,21 +2155,21 @@ html, body, .page, .main, .hero, .header, .footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000000 !important;
+  color: #ffffff !important;
   font-size: 1.2rem;
   transition: all 0.3s ease;
-  border: 1px solid #000000 !important;
+  border: 1px solid #ffffff !important;
   font-family: 'Cormorant Garamond', 'Merriweather', serif !important;
   font-style: italic !important;
   text-transform: uppercase !important;
 }
 
 .hero .social-links a:hover {
-  background: #000000 !important;
-  color: #ffffff !important;
+  background: #ffffff !important;
+  color: #000000 !important;
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  border: 1px solid #000000 !important;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+  border: 1px solid #ffffff !important;
 }
 
 .hero .hero-image {
