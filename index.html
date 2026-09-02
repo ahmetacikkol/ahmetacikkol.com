@@ -6,7 +6,7 @@
 <title>Ahmet Açıkkol — Cinematographer</title>
 <meta name="description" content="Ahmet Açıkkol — Istanbul-based cinematographer. TV series, commercials, Unreal Engine and music videos."/>
 <style>
-:root{--bg:#0a0a0b;--soft:#141416;--fg:#f4f2ee;--muted:#98958d;--line:rgba(255,255,255,.08)}
+:root{--bg:#f4f2ec;--soft:#e7e3da;--fg:#17160f;--muted:#7b776c;--line:rgba(0,0,0,.11)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--fg);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
@@ -15,7 +15,7 @@ a{color:inherit;text-decoration:none}
 
 /* NAV */
 .nav{position:fixed;inset:0 0 auto 0;z-index:90;display:flex;justify-content:space-between;align-items:center;
-padding:18px 4vw;background:linear-gradient(to bottom,rgba(10,10,11,.95),rgba(10,10,11,.75));
+padding:18px 4vw;background:linear-gradient(to bottom,rgba(244,242,236,.94),rgba(244,242,236,.70));
 backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .brand{font-size:14px;font-weight:700;letter-spacing:.3em}
 .nav-links{display:flex;gap:24px}
@@ -27,7 +27,7 @@ backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .filters{display:flex;gap:8px;flex-wrap:wrap;padding:104px 4vw 22px;max-width:1500px;margin:0 auto}
 .fbtn{font:inherit;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
 background:transparent;border:1px solid var(--line);border-radius:30px;padding:9px 16px;cursor:pointer;transition:all .25s}
-.fbtn:hover{color:var(--fg);border-color:rgba(255,255,255,.3)}
+.fbtn:hover{color:var(--fg);border-color:rgba(0,0,0,.30)}
 .fbtn.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
 
 /* GRID */
@@ -35,7 +35,7 @@ background:transparent;border:1px solid var(--line);border-radius:30px;padding:9
 @media(max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.grid{grid-template-columns:1fr}}
 .card{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:3px;background:var(--soft);cursor:pointer}
-.card img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.4) contrast(1.02);
+.card img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.28) contrast(1.02);
 transform:scale(1.001);transition:filter .45s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
 .card:hover img{filter:grayscale(0);transform:scale(1.05)}
 .card .meta{position:absolute;inset:auto 0 0 0;padding:30px 16px 14px;
@@ -43,8 +43,8 @@ background:linear-gradient(to top,rgba(0,0,0,.85),rgba(0,0,0,0));
 display:flex;justify-content:space-between;align-items:flex-end;gap:10px;
 opacity:0;transform:translateY(6px);transition:opacity .35s,transform .35s}
 .card:hover .meta{opacity:1;transform:none}
-.card .t{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
-.card .r{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.card .t{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff}
+.card .r{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.75);white-space:nowrap}
 @media(hover:none){.card .meta{opacity:1;transform:none}}
 @media(max-width:760px){
   .card .meta{flex-direction:column;align-items:flex-start;gap:4px;padding:34px 14px 13px}
@@ -69,11 +69,11 @@ footer{padding:32px 4vw;border-top:1px solid var(--line);display:flex;justify-co
 font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
 
 /* MODAL */
-.modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.93);padding:18px}
+.modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(244,242,236,.96);padding:18px}
 .modal.on{display:flex}
 .player{width:min(1150px,100%);aspect-ratio:16/9;position:relative}
 .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:4px}
-.close{position:absolute;top:16px;right:22px;font-size:26px;background:none;border:none;color:#fff;cursor:pointer;opacity:.8}
+.close{position:absolute;top:16px;right:22px;font-size:26px;background:none;border:none;color:#17160f;cursor:pointer;opacity:.8}
 .close:hover{opacity:1}
 
 /* reveal */
